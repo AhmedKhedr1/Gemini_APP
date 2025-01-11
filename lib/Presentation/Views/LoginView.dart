@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gemini_app/Constants/AppColors.dart';
 import 'package:gemini_app/Presentation/Views/CahtView.dart';
+import 'package:gemini_app/Presentation/Views/RegisterView.dart';
 import 'package:gemini_app/Presentation/Widgets/CustomButton.dart';
 import 'package:gemini_app/Presentation/Widgets/CustomTextField.dart';
 
@@ -25,9 +26,28 @@ class Loginview extends StatelessWidget {
             padding: EdgeInsets.zero,
             children: [
               SizedBox(
-                height: 100,
+                height: 90,
               ),
-              Image.asset('assets/images/bot icon.gif'),
+              Image.asset(
+                'assets/images/bot icon.gif',
+                height: 250,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Welcome Back',
+                    style: TextStyle(
+                      color: AppColors.lightColor.withOpacity(0.9),
+                      fontSize: 34,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 40,
+              ),
               Custom_TextField(
                 hint: 'Enter Your Email',
                 hidetext: false,
@@ -35,9 +55,7 @@ class Loginview extends StatelessWidget {
                 myValidator: (Value) {
                   if (Value == null || Value.isEmpty) {
                     return 'Please enter your Email';
-                  } else {
-                   
-                  }
+                  } else {}
                 },
               ),
               SizedBox(
@@ -50,13 +68,11 @@ class Loginview extends StatelessWidget {
                 myValidator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter your password';
-                  } else {
-                    
-                  }
+                  } else {}
                 },
               ),
               SizedBox(
-                height: 50,
+                height: 14,
               ),
               GestureDetector(
                   onTap: () {
@@ -68,7 +84,30 @@ class Loginview extends StatelessWidget {
                       ));
                     } else {}
                   },
-                  child: Custom_button(buttonInfo: 'Login'))
+                  child: Custom_button(buttonInfo: 'Login')),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 24),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Don\'t have an account ?  ',
+                      style: TextStyle(color: AppColors.lightColor, fontSize: 16),
+                    ),
+                    InkWell(
+                        onTap: () => Navigator.push(context, MaterialPageRoute(
+                              builder: (context) {
+                                return RegisterView();
+                              },
+                            )),
+                        child: Text(
+                          'Sign Up',
+                          style: TextStyle(
+                              color: AppColors.secondcolor, fontSize: 16),
+                        )),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

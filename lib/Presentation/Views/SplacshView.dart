@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gemini_app/Constants/AppColors.dart';
 import 'package:gemini_app/Presentation/Views/LoginView.dart';
+import 'package:gemini_app/Presentation/Views/RegisterView.dart';
 import 'package:gemini_app/Presentation/Widgets/CustomButton.dart';
 
 class Splacshview extends StatelessWidget {
@@ -51,7 +52,7 @@ class Splacshview extends StatelessWidget {
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(
                   builder: (context) {
-                    return Loginview();
+                    return RegisterView();
                   },
                 ));
               },
