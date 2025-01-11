@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gemini_app/Constants/AppColors.dart';
 import 'package:gemini_app/Presentation/Views/LoginView.dart';
+import 'package:gemini_app/Presentation/Widgets/CustomButton.dart';
 
 class Splacshview extends StatelessWidget {
   const Splacshview({super.key});
@@ -54,22 +55,7 @@ class Splacshview extends StatelessWidget {
                   },
                 ));
               },
-              child: Container(
-                height: 60,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                    color: AppColors.lightColor,
-                    borderRadius: BorderRadius.circular(32)),
-                child: Center(
-                  child: Text(
-                    'Get Started',
-                    style: TextStyle(
-                        color: AppColors.secondcolor,
-                        fontSize: 21,
-                        fontWeight: FontWeight.w500),
-                  ),
-                ),
-              ),
+              child: Custom_button(buttonInfo: 'Get Started',),
             )
           ],
         ),
