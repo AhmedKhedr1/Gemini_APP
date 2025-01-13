@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gemini_app/Presentation/Views/ChatView.dart';
 import 'package:gemini_app/Presentation/Views/SplacshView.dart';
 
 void main() {
