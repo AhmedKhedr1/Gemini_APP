@@ -7,15 +7,16 @@ class MassegeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Container(
           decoration: BoxDecoration(
-            color: Colors.grey.withOpacity(0.12),
+            color: Colors.grey.withOpacity(0.15),
             borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(12),
-              bottomRight: Radius.circular(12),
-              topRight: Radius.circular(12)
+              bottomLeft: Radius.circular(14),
+              bottomRight: Radius.circular(14),
+             // topRight: Radius.circular(12),
+             topLeft: Radius.circular(14)
             ),
           ),
           margin: EdgeInsets.all(8),

@@ -42,16 +42,15 @@ class Chatview extends StatelessWidget {
             color: AppColors.lightColor,
             thickness: 0.1,
           ),
-         
-         SizedBox(
-          height: 600,
-         
-           child: ListView.builder(
-            itemCount: 10,
-            itemBuilder: (context, index) {
-             return MassegeCard();
-           },),
-         ),
+          SizedBox(
+            height: 625,
+            child: ListView.builder(
+              itemCount: 10,
+              itemBuilder: (context, index) {
+                return MassegeCard();
+              },
+            ),
+          ),
           Divider(
             color: AppColors.lightColor,
             thickness: 0.1,
