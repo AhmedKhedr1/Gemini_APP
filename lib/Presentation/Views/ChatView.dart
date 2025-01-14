@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gemini_app/Constants/AppColors.dart';
+import 'package:gemini_app/Presentation/Widgets/MassegeCard.dart';
 
 class Chatview extends StatelessWidget {
   const Chatview({super.key});
@@ -36,15 +37,21 @@ class Chatview extends StatelessWidget {
         ],
       ),
       body: ListView(
-        physics: NeverScrollableScrollPhysics(),
         children: [
           Divider(
             color: AppColors.lightColor,
             thickness: 0.1,
           ),
-          SizedBox(
-            height: 625,
-          ),
+         
+         SizedBox(
+          height: 600,
+         
+           child: ListView.builder(
+            itemCount: 10,
+            itemBuilder: (context, index) {
+             return MassegeCard();
+           },),
+         ),
           Divider(
             color: AppColors.lightColor,
             thickness: 0.1,
