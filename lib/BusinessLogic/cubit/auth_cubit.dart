@@ -25,9 +25,9 @@ class AuthCubit extends Cubit<AuthState> {
   Future<void> signInWithEmail(String MyEmail, String MyPassword) async {
     emit(LoginLoading());
     try {
-      final resoponse = await supabase.auth.signInWithPassword(
-          email: 'valid.email@supabase.io', password: 'example-password');
-          emit(LoginSuccess());
+      final resoponse = await supabase.auth
+          .signInWithPassword(email: MyEmail, password: MyPassword);
+      emit(LoginSuccess());
     } on Exception catch (e) {
       emit(LoginFailure(
           errormassege: 'there was an error Please try again ,error is $e'));

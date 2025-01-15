@@ -21,8 +21,7 @@ class RegisterView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<AuthCubit, AuthState>(listener: (context, state) {
-      if (state is RegisterLoading) {
-      } else if (state is RegisterSuccess) {
+    if (state is RegisterSuccess) {
         Navigator.push(context, MaterialPageRoute(
           builder: (context) {
             return Loginview();

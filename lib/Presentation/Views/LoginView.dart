@@ -20,14 +20,13 @@ class Loginview extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<AuthCubit, AuthState>(
       listener: (context, state) {
-        if (state is LoginLoading) {
-        } else if (state is LoginSuccess) {
+        if (state is LoginSuccess) {
           Navigator.push(context, MaterialPageRoute(
             builder: (context) {
               return Homeview();
             },
           ));
-        }else if(state is LoginFailure){
+        } else if (state is LoginFailure) {
           print(state.errormassege);
         }
       },
@@ -93,7 +92,8 @@ class Loginview extends StatelessWidget {
                   GestureDetector(
                       onTap: () {
                         if (globalkey.currentState!.validate()) {
-                         BlocProvider.of<AuthCubit>(context).signInWithEmail(MyEmail.text, MyPassword.text);
+                          BlocProvider.of<AuthCubit>(context)
+                              .signInWithEmail(MyEmail.text, MyPassword.text);
                         } else {}
                       },
                       child: Custom_button(buttonInfo: 'Login')),
