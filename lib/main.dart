@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gemini_app/BusinessLogic/cubit/auth_cubit.dart';
 import 'package:gemini_app/Presentation/Views/SplacshView.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -14,12 +16,17 @@ void main() async {
 class GeminiAPP extends StatelessWidget {
   const GeminiAPP({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Splacshview(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => AuthCubit()),
+     //   BlocProvider(create: (context) => AuthCubit()),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Splacshview(),
+      ),
     );
   }
 }
