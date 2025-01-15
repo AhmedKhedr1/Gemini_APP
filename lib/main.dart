@@ -21,7 +21,6 @@ class GeminiAPP extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => AuthCubit()),
-     //   BlocProvider(create: (context) => AuthCubit()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

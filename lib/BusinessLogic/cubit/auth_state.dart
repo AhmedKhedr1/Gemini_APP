@@ -13,3 +13,11 @@ final class RegisterFailure extends AuthState {
   final String errormassege;
   RegisterFailure({required this.errormassege});
 }
+final class LoginLoading extends AuthState {}
+
+final class LoginSuccess extends AuthState {}
+
+final class LoginFailure extends AuthState {
+  final String errormassege;
+  LoginFailure({required this.errormassege});
+}
