@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gemini_app/Constants/AppColors.dart';
+import 'package:gemini_app/Presentation/Widgets/ChatTextField.dart';
 import 'package:gemini_app/Presentation/Widgets/MassegeCard.dart';
 
 class Chatview extends StatelessWidget {
@@ -60,32 +61,7 @@ class Chatview extends StatelessWidget {
             child: Row(
               children: [
                 Expanded(
-                  child: TextField(
-                    style: TextStyle(color: AppColors.lightColor),
-                    decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.search),
-                      filled: true,
-                      fillColor: Colors.grey.withOpacity(0.01),
-                      hintText: 'Ask ai chat anything',
-                      hintStyle: TextStyle(
-                          color: AppColors.lightColor.withOpacity(0.4)),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(16),
-                        borderSide: BorderSide(
-                            width: 2, color: Colors.grey.withOpacity(0.1)),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                            width: 2, color: Colors.grey.withOpacity(0.1)),
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                            width: 2, color: Colors.grey.withOpacity(0.1)),
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                    ),
-                  ),
+                  child: ChatTextField(),
                 ),
                 Container(
                     padding: EdgeInsets.all(8),
