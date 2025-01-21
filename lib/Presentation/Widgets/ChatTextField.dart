@@ -3,13 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:gemini_app/Constants/AppColors.dart';
 
 class ChatTextField extends StatelessWidget {
-  const ChatTextField({
+ TextEditingController CahtController=TextEditingController();
+ 
+   ChatTextField({required this.CahtController,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller:CahtController ,
       style: TextStyle(color: AppColors.lightColor),
       decoration: InputDecoration(
         prefixIcon: Icon(Icons.search),

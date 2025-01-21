@@ -29,9 +29,12 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   cupertino_icons: ^1.0.8
+  dash_chat_2: ^0.0.21
   flutter:
     sdk: flutter
   flutter_bloc: ^9.0.0
+  flutter_gemini: ^3.0.0
+  image_picker: ^1.1.2
   supabase_flutter: ^2.8.3
 
 dev_dependencies:
