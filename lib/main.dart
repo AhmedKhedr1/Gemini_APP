@@ -26,7 +26,7 @@ class GeminiAPP extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Chatview(),
+        home: Splacshview(),
       ),
     );
   }
