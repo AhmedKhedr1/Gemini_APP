@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:gemini_app/BusinessLogic/cubit/auth_cubit.dart';
 import 'package:gemini_app/Constants/Constants.dart';
-import 'package:gemini_app/Presentation/Views/ChatView.dart';
 import 'package:gemini_app/Presentation/Views/SplacshView.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
